@@ -1,0 +1,16 @@
+[
+{
+  "modid": "simpleseaons",
+  "name": "Simple Seasons",
+  "description": "Add seasons to Minecraft",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Benimatic"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
