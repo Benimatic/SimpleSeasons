@@ -7,31 +7,26 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class BiomeColorHandler {
 	
-	public int springGrassColor;
-	public float springGrassMultiplier;
-	public int springFoliageColor;
-	public float springFoliageMultiplier;
-	public int summerGrassColor;
-	public float summerGrassMultiplier;
-	public int summerFoliageColor;
-	public float summerFoliageMultiplier;
+	public int springGrassColor = 0x00FF00;
+	public float springGrassMultiplier = 0.0F;
+	public int springFoliageColor = 0x00FF00;
+	public float springFoliageMultiplier = 0.0F;
+	public int summerGrassColor = 0x00FF00;
+	public float summerGrassMultiplier = 0.3F;
+	public int summerFoliageColor = 0x00FF00;
+	public float summerFoliageMultiplier = 0.3F;
 	public int fallGrassColor = 0xFF0000;
-	public float fallGrassMultiplier = 1.0F;
-	public int fallFoliageColor;
-	public float fallFoliageMultiplier;
-	public int winterGrassColor;
-	public float winterGrassMultiplier;
-	public int winterFoliageColor;
-	public float winterFoliageMultiplier;
+	public float fallGrassMultiplier = 0.4F;
+	public int fallFoliageColor = 0xFF0000;
+	public float fallFoliageMultiplier = 0.6F;
+	public int winterGrassColor = 0x333333;
+	public float winterGrassMultiplier = 0.4F;
+	public int winterFoliageColor = 0x333333;
+	public float winterFoliageMultiplier = 0.6F;
 	
 
 	@SubscribeEvent
 	public void onGrassColor(BiomeEvent.GetGrassColor event) {
-		
-		fallGrassMultiplier = 1.0F;
-		fallFoliageColor = 0xFF0000;
-		fallFoliageMultiplier = 0.5F;
-		
 		switch (CurrentSeason.getSeason()) {
 		case SPRING :
 			event.newColor = applyColor(event.newColor, springGrassColor, springGrassMultiplier);
