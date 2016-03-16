@@ -19,14 +19,15 @@ public class BiomeColorHandler {
 	public float fallGrassMultiplier = 0.4F;
 	public int fallFoliageColor = 0xFF0000;
 	public float fallFoliageMultiplier = 0.6F;
-	public int winterGrassColor = 0x333333;
-	public float winterGrassMultiplier = 0.4F;
-	public int winterFoliageColor = 0x333333;
-	public float winterFoliageMultiplier = 0.6F;
+	public int winterGrassColor = 0x777766;
+	public float winterGrassMultiplier = 0.9F;
+	public int winterFoliageColor = 0x999988;
+	public float winterFoliageMultiplier = 0.9F;
 	
 
 	@SubscribeEvent
 	public void onGrassColor(BiomeEvent.GetGrassColor event) {
+
 		switch (CurrentSeason.getSeason()) {
 		case SPRING :
 			event.newColor = applyColor(event.newColor, springGrassColor, springGrassMultiplier);
